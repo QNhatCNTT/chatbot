@@ -140,7 +140,7 @@ let getMainMenuTemplate = () => {
                 "template_type": "generic",
                 "elements": [{
                     "title": "CATALOG SOURSE",
-                    "subtitle": "Danh mục của bài giảng tại ABC Study Online",
+                    "subtitle": "Danh mục khóa học tại ABC Study Online",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
