@@ -13,7 +13,7 @@ const IMAGE_WEB_ANGULAR = 'http://bit.ly/bot_angular';
 
 const IMAGE_MOBILE_ANDROID = 'http://bit.ly/bot_android';
 const IMAGE_MOBILE_REACTNATIVE = 'http://bit.ly/bot_reactnative';
-const IMAGE_MOBILE_IOS = 'http://bit.ly/bot_IOS';
+const IMAGE_MOBILE_IOS = 'http://bit.ly/bot-IOS';
 const IMAGE_MOBILE_FLUTTER = 'http://bit.ly/bot_flutter';
 const IMAGE_MOBILE_KOTLIN = 'http://bit.ly/bot_kotlin';
 const IMAGE_MOBILE_SWIFT = 'http://bit.ly/bot_swift';
