@@ -149,10 +149,13 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotService.handleSendCatMobile(sender_psid);
             break;
 
+        case 'BACK_CATALOG':
+            await chatbotService.handleBackCatalog(sender_psid);
+            break;
+
         case 'BACK_MAIN':
             await chatbotService.handleBackMain(sender_psid);
             break;
-
         default:
             // code block
             response = { "text": `oop! I don't know  response with Postback ${payload}` }

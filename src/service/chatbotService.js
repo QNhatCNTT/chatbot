@@ -13,7 +13,7 @@ const IMAGE_WEB_ANGULAR = 'http://bit.ly/bot_angular';
 
 const IMAGE_MOBILE_ANDROID = 'http://bit.ly/bot_android';
 const IMAGE_MOBILE_REACTNATIVE = 'http://bit.ly/bot_reactnative';
-const IMAGE_MOBILE_IOS = 'http://bit.ly/bot-IOS';
+const IMAGE_MOBILE_IOS = 'http://bit.ly/bot_ios';
 const IMAGE_MOBILE_FLUTTER = 'http://bit.ly/bot_flutter';
 const IMAGE_MOBILE_KOTLIN = 'http://bit.ly/bot_kotlin';
 const IMAGE_MOBILE_SWIFT = 'http://bit.ly/bot_swift';
@@ -288,7 +288,7 @@ let getCatWeb = () => {
                         {
                             "type": "postback",
                             "title": "Trở về",
-                            "payload": "BACK_MAIN",
+                            "payload": "BACK_CATALOG",
                         },
 
                     ],
@@ -406,7 +406,7 @@ let getCatMobile = () => {
                         {
                             "type": "postback",
                             "title": "Trở về",
-                            "payload": "BACK_MAIN",
+                            "payload": "BACK_CATALOG",
                         },
 
                     ],
@@ -418,14 +418,19 @@ let getCatMobile = () => {
     return response;
 };
 
-let handleBackMain = async (sender_psid) => {
+let handleBackCatalog = async (sender_psid) => {
     await handleSendCatalog(sender_psid);
 };
 
+let handleBackMain = async (sender_psid) => {
+    let response2 = getStartedTemplate();
+    await callSendAPI(sender_psid, response2);
+};
 module.exports = {
     handleGetStarted: handleGetStarted,
     handleSendCatalog: handleSendCatalog,
     handleSendCatWeb: handleSendCatWeb,
     handleSendCatMobile: handleSendCatMobile,
+    handleBackCatalog: handleBackCatalog,
     handleBackMain: handleBackMain,
 }
