@@ -1,5 +1,4 @@
 require('dotenv').config();
-import { response } from "express";
 import request from "request";
 
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
@@ -44,9 +43,7 @@ let getUserName = (sender_psid) => {
                 reject(err);
             }
         });
-
     })
-
 };
 
 let handleGetStarted = (sender_psid) => {
