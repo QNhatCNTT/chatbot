@@ -139,7 +139,9 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotService.handleGetStarted(sender_psid);
             break;
 
-
+        case 'COURSE_CATALOG':
+            await chatbotService.handleSendCatalog(sender_psid);
+            break;
         default:
             // code block
             response = { "text": `oop! I don't know  response with Postback ${payload}` }
