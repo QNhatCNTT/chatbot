@@ -125,12 +125,10 @@ async function handlePostback(sender_psid, received_postback) {
     // Set the response based on the postback payload
     switch (payload) {
         case 'yes':
-            // code block
             response = { "text": "Thanks!" }
             break;
 
         case 'no':
-            // code block
             response = { "text": "Oops, try sending another image." }
             break;
 
@@ -142,6 +140,15 @@ async function handlePostback(sender_psid, received_postback) {
         case 'COURSE_CATALOG':
             await chatbotService.handleSendCatalog(sender_psid);
             break;
+
+        case 'WEB':
+            await chatbotService.handleSendCatWeb(sender_psid);
+            break;
+
+        case 'MOBILE':
+            await chatbotService.handleSendCatMobile(sender_psid);
+            break;
+
         default:
             // code block
             response = { "text": `oop! I don't know  response with Postback ${payload}` }

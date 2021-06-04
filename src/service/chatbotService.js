@@ -162,7 +162,219 @@ let getMainMenuTemplate = () => {
     return response;
 };
 
+let handleSendCatWeb = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+
+            let response1 = getCatWeb();
+            await callSendAPI(sender_psid, response1);
+
+            resolve('done');
+        } catch (e) {
+            reject(e);
+        }
+    })
+};
+
+let getCatWeb = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "Javascript",
+                    "subtitle": "Các khóa học về Javascript",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_JAVASCRIPT",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "React",
+                    "subtitle": "Các khóa học về React",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_REACT",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "NodeJS",
+                    "subtitle": "Các khóa học về NodeJS",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_NODEJS",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "PHP",
+                    "subtitle": "Các khóa học về PHP",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_PHP",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "Vue",
+                    "subtitle": "Các khóa học về Vue",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_VUE",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "Angular",
+                    "subtitle": "Các khóa học về Angular",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_ANGULAR",
+                        },
+
+                    ],
+                }
+                ]
+            }
+        }
+    };
+    return response;
+};
+
+let handleSendCatMobile = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+
+            let response1 = getCatMobile();
+            await callSendAPI(sender_psid, response1);
+
+            resolve('done');
+        } catch (e) {
+            reject(e);
+        }
+    })
+};
+
+let getCatMobile = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "Android",
+                    "subtitle": "Các khóa học về Android",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_ANDROID",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "React Native",
+                    "subtitle": "Các khóa học về React Native",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_REACT_NATIVE",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "IOS",
+                    "subtitle": "Các khóa học về IOS",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_IOS",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "Flutter",
+                    "subtitle": "Các khóa học về Flutter",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_FLUTTER",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "Kotlin",
+                    "subtitle": "Các khóa học về Kotlin",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_KOTLIN",
+                        },
+
+                    ],
+                },
+                {
+                    "title": "Swift",
+                    "subtitle": "Các khóa học về Swift",
+                    /* "image_url": IMAGE_GET_STARTED, */
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Xem chi tiết",
+                            "payload": "VIEW_SWIFT",
+                        },
+
+                    ],
+                }
+                ]
+            }
+        }
+    };
+    return response;
+};
+
 module.exports = {
     handleGetStarted: handleGetStarted,
     handleSendCatalog: handleSendCatalog,
+    handleSendCatWeb: handleSendCatWeb,
+    handleSendCatMobile: handleSendCatMobile,
 }
