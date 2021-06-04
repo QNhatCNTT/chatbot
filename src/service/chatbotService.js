@@ -274,6 +274,19 @@ let getCatWeb = () => {
                         },
 
                     ],
+                },
+                {
+                    "title": "back",
+                    "subtitle": "Quay trở về main bot",
+                    "image_url": IMAGE_GET_STARTED,
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Trở về",
+                            "payload": "BACK_MAIN",
+                        },
+
+                    ],
                 }
                 ]
             }
@@ -379,6 +392,19 @@ let getCatMobile = () => {
                         },
 
                     ],
+                },
+                {
+                    "title": "back",
+                    "subtitle": "Quay trở về main bot",
+                    "image_url": IMAGE_GET_STARTED,
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Trở về",
+                            "payload": "BACK_MAIN",
+                        },
+
+                    ],
                 }
                 ]
             }
@@ -387,9 +413,14 @@ let getCatMobile = () => {
     return response;
 };
 
+let handleBackMain = async (sender_psid) => {
+    await handleSendCatalog(sender_psid);
+};
+
 module.exports = {
     handleGetStarted: handleGetStarted,
     handleSendCatalog: handleSendCatalog,
     handleSendCatWeb: handleSendCatWeb,
     handleSendCatMobile: handleSendCatMobile,
+    handleBackMain: handleBackMain,
 }
