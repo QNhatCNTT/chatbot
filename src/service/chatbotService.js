@@ -10,6 +10,13 @@ const IMAGE_WEB_NODEJS = 'http://bit.ly/bot_nodejs';
 const IMAGE_WEB_PHP = 'http://bit.ly/bot-php';
 const IMAGE_WEB_VUEJS = 'http://bit.ly/bot_vuejs';
 const IMAGE_WEB_ANGULAR = 'http://bit.ly/bot_angular';
+const IMAGE_MOBILE_ANDROID = 'http://bit.ly/bot_android';
+const IMAGE_MOBILE_REACTNATIVE = 'http://bit.ly/bot_reactnative';
+const IMAGE_MOBILE_IOS = 'http://bit.ly/bot_IOS';
+const IMAGE_MOBILE_FLUTTER = 'http://bit.ly/bot_flutter';
+const IMAGE_MOBILE_KOTLIN = 'http://bit.ly/bot_kotlin';
+const IMAGE_MOBILE_SWIFT = 'http://bit.ly/bot_swift';
+
 
 let callSendAPI = (sender_psid, response) => {
     // Construct the message body
@@ -297,7 +304,7 @@ let getCatMobile = () => {
                 "elements": [{
                     "title": "Android",
                     "subtitle": "Các khóa học về Android",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_MOBILE_ANDROID,
                     "buttons": [
                         {
                             "type": "postback",
@@ -310,7 +317,7 @@ let getCatMobile = () => {
                 {
                     "title": "React Native",
                     "subtitle": "Các khóa học về React Native",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_MOBILE_REACTNATIVE,
                     "buttons": [
                         {
                             "type": "postback",
@@ -323,7 +330,7 @@ let getCatMobile = () => {
                 {
                     "title": "IOS",
                     "subtitle": "Các khóa học về IOS",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_MOBILE_IOS,
                     "buttons": [
                         {
                             "type": "postback",
@@ -336,7 +343,7 @@ let getCatMobile = () => {
                 {
                     "title": "Flutter",
                     "subtitle": "Các khóa học về Flutter",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_MOBILE_FLUTTER,
                     "buttons": [
                         {
                             "type": "postback",
@@ -349,7 +356,7 @@ let getCatMobile = () => {
                 {
                     "title": "Kotlin",
                     "subtitle": "Các khóa học về Kotlin",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_MOBILE_KOTLIN,
                     "buttons": [
                         {
                             "type": "postback",
@@ -362,7 +369,7 @@ let getCatMobile = () => {
                 {
                     "title": "Swift",
                     "subtitle": "Các khóa học về Swift",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_MOBILE_SWIFT,
                     "buttons": [
                         {
                             "type": "postback",
