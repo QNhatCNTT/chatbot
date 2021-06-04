@@ -226,6 +226,12 @@ let setupPersistentMenu = async (req, res) => {
                         "webview_height_ratio": "full"
                     },
                     {
+                        "type": "web_url",
+                        "title": "Website",
+                        "url": "https://demo-bot-chat.herokuapp.com/",
+                        "webview_height_ratio": "full"
+                    },
+                    {
                         "type": "postback",
                         "title": "Khởi động lại bot",
                         "payload": "BOT_RESTART"
