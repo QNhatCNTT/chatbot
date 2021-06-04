@@ -10,6 +10,7 @@ const IMAGE_WEB_NODEJS = 'http://bit.ly/bot_nodejs';
 const IMAGE_WEB_PHP = 'http://bit.ly/bot-php';
 const IMAGE_WEB_VUEJS = 'http://bit.ly/bot_vuejs';
 const IMAGE_WEB_ANGULAR = 'http://bit.ly/bot_angular';
+
 const IMAGE_MOBILE_ANDROID = 'http://bit.ly/bot_android';
 const IMAGE_MOBILE_REACTNATIVE = 'http://bit.ly/bot_reactnative';
 const IMAGE_MOBILE_IOS = 'http://bit.ly/bot_IOS';

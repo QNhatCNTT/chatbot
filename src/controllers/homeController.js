@@ -137,6 +137,7 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotService.handleGetStarted(sender_psid);
             break;
 
+        case 'BACK_MAIN':
         case 'COURSE_CATALOG':
             await chatbotService.handleSendCatalog(sender_psid);
             break;
@@ -148,6 +149,8 @@ async function handlePostback(sender_psid, received_postback) {
         case 'MOBILE':
             await chatbotService.handleSendCatMobile(sender_psid);
             break;
+
+
 
         default:
             // code block
