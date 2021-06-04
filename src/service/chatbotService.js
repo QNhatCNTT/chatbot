@@ -30,7 +30,7 @@ let handleGetStarted = () => {
     return Promise(async (resolve, reject) => {
         try {
             let response = { "text": "Xin chào mừng bạn đến với ABC Study Online" }
-            await this.callSendAPI(response);
+            await callSendAPI(response);
         } catch (e) {
             reject(e);
         }
