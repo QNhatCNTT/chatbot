@@ -156,6 +156,12 @@ async function handlePostback(sender_psid, received_postback) {
         case 'BACK_MAIN':
             await chatbotService.handleBackMain(sender_psid);
             break;
+
+        case 'VIEW_JAVASCRIPT':
+            await chatbotService.handleDetailJavascript(sender_psid);
+            break;
+
+
         default:
             // code block
             response = { "text": `oop! I don't know  response with Postback ${payload}` }

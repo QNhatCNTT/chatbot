@@ -103,11 +103,6 @@ let getStartedTemplate = () => {
                             "type": "postback",
                             "title": "Danh mục bài giảng",
                             "payload": "COURSE_CATALOG",
-                        },
-                        {
-                            "type": "postback",
-                            "title": "Chi tiết bài giảng",
-                            "payload": "COURSE_DETAIL",
                         }
                     ],
                 }]
@@ -426,6 +421,87 @@ let handleBackMain = async (sender_psid) => {
     let response2 = getStartedTemplate();
     await callSendAPI(sender_psid, response2);
 };
+
+let handleDetailJavascript = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+
+            let response1 = getDetailJavascript();
+            await callSendAPI(sender_psid, response1);
+
+            resolve('done');
+        } catch (e) {
+            reject(e);
+        }
+    })
+};
+
+let getDetailJavascript = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "Tutorial 1",
+                    "subtitle": "Setup môi trường và cài đặt",
+                    "image_url": IMAGE_WEB_JS,
+
+                },
+                {
+                    "title": "Tutorial 2",
+                    "subtitle": "Khái niệm 1 và thực hành 1",
+                    "image_url": IMAGE_WEB_JS,
+
+                },
+                {
+                    "title": "Tutorial 3",
+                    "subtitle": "Khái niệm 2 và thực hành 2",
+                    "image_url": IMAGE_WEB_JS,
+
+                },
+                {
+                    "title": "Tutorial 4",
+                    "subtitle": "Khái niệm 3 và thực hành 3",
+                    "image_url": IMAGE_WEB_JS,
+
+                },
+                {
+                    "title": "Tutorial 5",
+                    "subtitle": "Khái niệm 4 và thực hành 4",
+                    "image_url": IMAGE_WEB_JS,
+
+                },
+                {
+                    "title": "Tutorial 6",
+                    "subtitle": "Khái niệm 5 và thực hành 5",
+                    "image_url": IMAGE_WEB_JS,
+
+                },
+                {
+                    "title": "Đăng ký",
+                    "subtitle": "Giá: 1.500.000VND",
+                    "image_url": IMAGE_WEB_JS,
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "Đăng ký",
+                            "payload": "REGISTER",
+                        },
+                        {
+                            "type": "postback",
+                            "title": "Trở về",
+                            "payload": "BACK_CATALOG",
+                        },
+
+                    ],
+                }
+                ]
+            }
+        }
+    };
+    return response;
+};
 module.exports = {
     handleGetStarted: handleGetStarted,
     handleSendCatalog: handleSendCatalog,
@@ -433,4 +509,5 @@ module.exports = {
     handleSendCatMobile: handleSendCatMobile,
     handleBackCatalog: handleBackCatalog,
     handleBackMain: handleBackMain,
+    handleDetailJavascript: handleDetailJavascript,
 }
