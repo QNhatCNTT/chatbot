@@ -95,17 +95,17 @@ let getStartedTemplate = () => {
                     "buttons": [
                         {
                             "type": "postback",
-                            "title": "Tìm kiếm khóa học",
+                            "title": "Tìm kiếm bài giảng",
                             "payload": "COURSE_SEARCH",
                         },
                         {
                             "type": "postback",
-                            "title": "Danh mục khóa học",
+                            "title": "Danh mục bài giảng",
                             "payload": "COURSE_CATALOG",
                         },
                         {
                             "type": "postback",
-                            "title": "Chi tiết khóa học",
+                            "title": "Chi tiết bài giảng",
                             "payload": "COURSE_DETAIL",
                         }
                     ],
@@ -139,7 +139,7 @@ let getMainMenuTemplate = () => {
                 "template_type": "generic",
                 "elements": [{
                     "title": "CATALOG SOURSE",
-                    "subtitle": "Danh mục của khóa học tại ABC Study Online",
+                    "subtitle": "Danh mục của bài giảng tại ABC Study Online",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
@@ -198,7 +198,7 @@ let getCatWeb = () => {
                 "template_type": "generic",
                 "elements": [{
                     "title": "Javascript",
-                    "subtitle": "Các khóa học về Javascript",
+                    "subtitle": "Các bài giảng về Javascript",
                     "image_url": IMAGE_WEB_JS,
                     "buttons": [
                         {
@@ -211,7 +211,7 @@ let getCatWeb = () => {
                 },
                 {
                     "title": "ReactJS",
-                    "subtitle": "Các khóa học về ReactJS",
+                    "subtitle": "Các bài giảng về ReactJS",
                     "image_url": IMAGE_WEB_REACTJS,
                     "buttons": [
                         {
@@ -224,7 +224,7 @@ let getCatWeb = () => {
                 },
                 {
                     "title": "NodeJS",
-                    "subtitle": "Các khóa học về NodeJS",
+                    "subtitle": "Các bài giảng về NodeJS",
                     "image_url": IMAGE_WEB_NODEJS,
                     "buttons": [
                         {
@@ -237,7 +237,7 @@ let getCatWeb = () => {
                 },
                 {
                     "title": "PHP",
-                    "subtitle": "Các khóa học về PHP",
+                    "subtitle": "Các bài giảng về PHP",
                     "image_url": IMAGE_WEB_PHP,
                     "buttons": [
                         {
@@ -250,7 +250,7 @@ let getCatWeb = () => {
                 },
                 {
                     "title": "VueJS",
-                    "subtitle": "Các khóa học về VueJS",
+                    "subtitle": "Các bài giảng về VueJS",
                     "image_url": IMAGE_WEB_VUEJS,
                     "buttons": [
                         {
@@ -263,7 +263,7 @@ let getCatWeb = () => {
                 },
                 {
                     "title": "Angular",
-                    "subtitle": "Các khóa học về Angular",
+                    "subtitle": "Các bài giảng về Angular",
                     "image_url": IMAGE_WEB_ANGULAR,
                     "buttons": [
                         {
@@ -303,7 +303,7 @@ let getCatMobile = () => {
                 "template_type": "generic",
                 "elements": [{
                     "title": "Android",
-                    "subtitle": "Các khóa học về Android",
+                    "subtitle": "Các bài giảng về Android",
                     "image_url": IMAGE_MOBILE_ANDROID,
                     "buttons": [
                         {
@@ -316,7 +316,7 @@ let getCatMobile = () => {
                 },
                 {
                     "title": "React Native",
-                    "subtitle": "Các khóa học về React Native",
+                    "subtitle": "Các bài giảng về React Native",
                     "image_url": IMAGE_MOBILE_REACTNATIVE,
                     "buttons": [
                         {
@@ -329,7 +329,7 @@ let getCatMobile = () => {
                 },
                 {
                     "title": "IOS",
-                    "subtitle": "Các khóa học về IOS",
+                    "subtitle": "Các bài giảng về IOS",
                     "image_url": IMAGE_MOBILE_IOS,
                     "buttons": [
                         {
@@ -342,7 +342,7 @@ let getCatMobile = () => {
                 },
                 {
                     "title": "Flutter",
-                    "subtitle": "Các khóa học về Flutter",
+                    "subtitle": "Các bài giảng về Flutter",
                     "image_url": IMAGE_MOBILE_FLUTTER,
                     "buttons": [
                         {
@@ -355,7 +355,7 @@ let getCatMobile = () => {
                 },
                 {
                     "title": "Kotlin",
-                    "subtitle": "Các khóa học về Kotlin",
+                    "subtitle": "Các bài giảng về Kotlin",
                     "image_url": IMAGE_MOBILE_KOTLIN,
                     "buttons": [
                         {
@@ -368,7 +368,7 @@ let getCatMobile = () => {
                 },
                 {
                     "title": "Swift",
-                    "subtitle": "Các khóa học về Swift",
+                    "subtitle": "Các bài giảng về Swift",
                     "image_url": IMAGE_MOBILE_SWIFT,
                     "buttons": [
                         {
