@@ -4,6 +4,13 @@ import request from "request";
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
 const IMAGE_GET_STARTED = 'http://bit.ly/abcstudyonline';
+const IMAGE_WEB_JS = 'http://bit.ly/bot_javascript';
+const IMAGE_WEB_REACTJS = 'http://bit.ly/bot_reactjs';
+const IMAGE_WEB_NODEJS = 'http://bit.ly/bot_nodejs';
+const IMAGE_WEB_PHP = 'http://bit.ly/bot_php';
+const IMAGE_WEB_VUEJS = 'http://bit.ly/bot_vuejs';
+const IMAGE_WEB_ANGULAR = 'http://bit.ly/bot_angular';
+
 let callSendAPI = (sender_psid, response) => {
     // Construct the message body
     let request_body = {
@@ -185,7 +192,7 @@ let getCatWeb = () => {
                 "elements": [{
                     "title": "Javascript",
                     "subtitle": "Các khóa học về Javascript",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_WEB_JS,
                     "buttons": [
                         {
                             "type": "postback",
@@ -196,14 +203,14 @@ let getCatWeb = () => {
                     ],
                 },
                 {
-                    "title": "React",
-                    "subtitle": "Các khóa học về React",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "title": "ReactJS",
+                    "subtitle": "Các khóa học về ReactJS",
+                    "image_url": IMAGE_WEB_REACTJS,
                     "buttons": [
                         {
                             "type": "postback",
                             "title": "Xem chi tiết",
-                            "payload": "VIEW_REACT",
+                            "payload": "VIEW_REACTJS",
                         },
 
                     ],
@@ -211,7 +218,7 @@ let getCatWeb = () => {
                 {
                     "title": "NodeJS",
                     "subtitle": "Các khóa học về NodeJS",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_WEB_NODEJS,
                     "buttons": [
                         {
                             "type": "postback",
@@ -224,7 +231,7 @@ let getCatWeb = () => {
                 {
                     "title": "PHP",
                     "subtitle": "Các khóa học về PHP",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_WEB_PHP,
                     "buttons": [
                         {
                             "type": "postback",
@@ -235,14 +242,14 @@ let getCatWeb = () => {
                     ],
                 },
                 {
-                    "title": "Vue",
-                    "subtitle": "Các khóa học về Vue",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "title": "VueJS",
+                    "subtitle": "Các khóa học về VueJS",
+                    "image_url": IMAGE_WEB_VUEJS,
                     "buttons": [
                         {
                             "type": "postback",
                             "title": "Xem chi tiết",
-                            "payload": "VIEW_VUE",
+                            "payload": "VIEW_VUEJS",
                         },
 
                     ],
@@ -250,7 +257,7 @@ let getCatWeb = () => {
                 {
                     "title": "Angular",
                     "subtitle": "Các khóa học về Angular",
-                    /* "image_url": IMAGE_GET_STARTED, */
+                    "image_url": IMAGE_WEB_ANGULAR,
                     "buttons": [
                         {
                             "type": "postback",
