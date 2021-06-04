@@ -27,7 +27,7 @@ let callSendAPI = (sender_psid, response) => {
     });
 };
 let handleGetStarted = (sender_psid) => {
-    return Promise(async (resolve, reject) => {
+    return new Promise(async (resolve, reject) => {
         try {
             let response = { "text": "Xin chào mừng bạn đến với ABC Study Online" }
             await callSendAPI(sender_psid, response);
