@@ -167,6 +167,11 @@ let getMainMenuTemplate = () => {
                             "url": "https://demo-bot-chat.herokuapp.com/",
                             "webview_height_ratio": "full"
                         },
+                        {
+                            "type": "postback",
+                            "title": "Trở về",
+                            "payload": "BACK_MAIN",
+                        }
 
                     ],
                 }
