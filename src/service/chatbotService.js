@@ -3,6 +3,7 @@ import request from "request";
 
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 
+const IMAGE_GET_STARTED = 'http://bit.ly/abcstudyonline';
 let callSendAPI = (sender_psid, response) => {
     // Construct the message body
     let request_body = {
@@ -50,13 +51,55 @@ let handleGetStarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let username = await getUserName(sender_psid);
-            let response = { "text": `Xin chào mừng ${username} đến với ABC Study Online` }
-            await callSendAPI(sender_psid, response);
+            let response1 = { "text": `Xin chào mừng ${username} đến với ABC Study Online` }
+
+            let response2 = sendGetStartedTemplate();
+            //send text message
+            await callSendAPI(sender_psid, response1);
+
+            //send generic template message
+            await callSendAPI(sender_psid, response2);
+
+
             resolve('done');
         } catch (e) {
             reject(e);
         }
     })
+};
+
+let sendGetStartedTemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "ABC STUDY ONLINE",
+                    "subtitle": "Dưới đây là các option",
+                    "image_url": IMAGE_GET_STARTED,
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "TÌM KIẾM KHÓA HỌC!",
+                            "payload": "COURSE_SEARCH",
+                        },
+                        {
+                            "type": "postback",
+                            "title": "DANH MỤC KHÓA HỌC",
+                            "payload": "COURSE_CATALOG",
+                        },
+                        {
+                            "type": "postback",
+                            "title": "CHI TIẾT KHÓA HỌC",
+                            "payload": "COURSE_DETAIL",
+                        }
+                    ],
+                }]
+            }
+        }
+    };
+    return response;
 };
 
 module.exports = {
