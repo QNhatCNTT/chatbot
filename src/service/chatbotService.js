@@ -421,6 +421,13 @@ let handleBackMain = async (sender_psid) => {
     let response2 = getStartedTemplate();
     await callSendAPI(sender_psid, response2);
 };
+let handleBackWeb = async (sender_psid) => {
+    await handleSendCatWeb(sender_psid);
+};
+
+let handleBackMobile = async (sender_psid) => {
+    await handleSendCatMobile(sender_psid);
+};
 
 let handleDetailJavascript = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
@@ -491,7 +498,7 @@ let getDetailJavascript = () => {
                         {
                             "type": "postback",
                             "title": "Trở về",
-                            "payload": "BACK_CATALOG",
+                            "payload": "BACK_WEB",
                         },
 
                     ],
@@ -510,4 +517,6 @@ module.exports = {
     handleBackCatalog: handleBackCatalog,
     handleBackMain: handleBackMain,
     handleDetailJavascript: handleDetailJavascript,
+    handleBackWeb: handleBackWeb,
+    handleBackMobile: handleBackMobile,
 }
