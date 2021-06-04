@@ -7,7 +7,7 @@ const IMAGE_GET_STARTED = 'http://bit.ly/abcstudyonline';
 const IMAGE_WEB_JS = 'http://bit.ly/bot_javascript';
 const IMAGE_WEB_REACTJS = 'http://bit.ly/bot_reactjs';
 const IMAGE_WEB_NODEJS = 'http://bit.ly/bot_nodejs';
-const IMAGE_WEB_PHP = 'http://bit.ly/bot_php';
+const IMAGE_WEB_PHP = 'http://bit.ly/bot-php';
 const IMAGE_WEB_VUEJS = 'http://bit.ly/bot_vuejs';
 const IMAGE_WEB_ANGULAR = 'http://bit.ly/bot_angular';
 
