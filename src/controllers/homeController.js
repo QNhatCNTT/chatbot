@@ -132,6 +132,7 @@ async function handlePostback(sender_psid, received_postback) {
             // code block
             response = { "text": "Oops, try sending another image." }
             break;
+        case 'BOT_RESTART':
         case 'GET_STARTED':
             await chatbotService.handleGetStarted(sender_psid);
 
@@ -195,9 +196,61 @@ let setupProfile = async (req, res) => {
 
     return res.send("Setup profile succeed!");
 };
+
+let setupPersistentMenu = async (req, res) => {
+    let request_body = {
+        "persistent_menu": [
+            {
+                "locale": "default",
+                "composer_input_disabled": false,
+                "call_to_actions": [
+                    {
+                        "type": "postback",
+                        "title": "Tìm kiếm khóa học",
+                        "payload": "COURSE_SEARCH"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Danh mục khóa học",
+                        "payload": "COURSE_CATALOG"
+                    },
+                    {
+                        "type": "web_url",
+                        "title": "Facebook Page",
+                        "url": "https://www.facebook.com/ABC-Study-Online-101052528872104",
+                        "webview_height_ratio": "full"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Khởi động lại bot",
+                        "payload": "BOT_RESTART"
+                    }
+                ]
+            }
+        ]
+    }
+
+    // Send the HTTP request to the Messenger Platform
+    await request({
+        "uri": `https://graph.facebook.com/v10.0/me/messenger_profile?access_token=${PAGE_ACCESS_TOKEN}`,
+        "qs": { "access_token": PAGE_ACCESS_TOKEN },
+        "method": "POST",
+        "json": request_body
+    }, (err, res, body) => {
+        console.log(body);
+        if (!err) {
+            console.log('setup persistent menu succeeds!')
+        } else {
+            console.error("Unable to setup persistent menu:" + err);
+        }
+    });
+
+    return res.send("Setup profile succeed!");
+};
 module.exports = {
     getHomePage: getHomePage,
     postWebhook: postWebhook,
     getWebhook: getWebhook,
     setupProfile: setupProfile,
+    setupPersistentMenu: setupPersistentMenu,
 }

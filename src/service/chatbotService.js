@@ -81,17 +81,17 @@ let sendGetStartedTemplate = () => {
                     "buttons": [
                         {
                             "type": "postback",
-                            "title": "TÌM KIẾM KHÓA HỌC!",
+                            "title": "Tìm kiếm khóa học",
                             "payload": "COURSE_SEARCH",
                         },
                         {
                             "type": "postback",
-                            "title": "DANH MỤC KHÓA HỌC",
+                            "title": "Danh mục khóa học",
                             "payload": "COURSE_CATALOG",
                         },
                         {
                             "type": "postback",
-                            "title": "CHI TIẾT KHÓA HỌC",
+                            "title": "Chi tiết khóa học",
                             "payload": "COURSE_DETAIL",
                         }
                     ],
