@@ -53,7 +53,7 @@ let handleGetStarted = (sender_psid) => {
             let username = await getUserName(sender_psid);
             let response1 = { "text": `Xin chào mừng ${username} đến với ABC Study Online` }
 
-            let response2 = GetStartedTemplate();
+            let response2 = getStartedTemplate();
             //send text message
             await callSendAPI(sender_psid, response1);
 
@@ -68,7 +68,7 @@ let handleGetStarted = (sender_psid) => {
     })
 };
 
-let GetStartedTemplate = () => {
+let getStartedTemplate = () => {
     let response = {
         "attachment": {
             "type": "template",
@@ -106,9 +106,8 @@ let handleSendCatalog = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
 
-            let response2 = GetMainMenuTemplate();
+            let response1 = getMainMenuTemplate();
             await callSendAPI(sender_psid, response1);
-
 
 
             resolve('done');
@@ -118,15 +117,15 @@ let handleSendCatalog = (sender_psid) => {
     })
 };
 
-let GetMainMenuTemplate = () => {
+let getMainMenuTemplate = () => {
     let response = {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "CATALOG",
-                    "subtitle": "Chúng tôi sẽ mang đến cho bạn những khóa học bổ ích về web và mobile",
+                    "title": "CATALOG SOURSE",
+                    "subtitle": "Danh mục của khóa học tại ABC Study Online",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
@@ -136,19 +135,20 @@ let GetMainMenuTemplate = () => {
                         },
                         {
                             "type": "postback",
-                            "title": "Lear Mobile",
+                            "title": "Learn Mobile",
                             "payload": "MOBILE",
-                        }
+                        },
+
                     ],
                 },
                 {
                     "title": "WEBSITE",
-                    "subtitle": "Vui lòng truy cập trang web để biết thêm thông tin",
+                    "subtitle": "Vui lòng truy cập đến website để biết thêm nhiều thông tin và ưu đãi",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
                             "type": "web_url",
-                            "title": "Website Page",
+                            "title": "Website",
                             "url": "https://demo-bot-chat.herokuapp.com/",
                             "webview_height_ratio": "full"
                         },
