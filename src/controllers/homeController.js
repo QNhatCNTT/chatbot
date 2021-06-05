@@ -141,7 +141,7 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotService.handleSendCatalog(sender_psid);
             break;
 
-        case 'LEARN_WE':
+        case 'LEARN_WEB':
             await chatbotService.handleSendCatWeb(sender_psid);
             break;
 
