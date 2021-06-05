@@ -48,7 +48,7 @@ let callSendAPI = async (sender_psid, response) => {
             });
 
         } catch (e) {
-            console.log(e);
+            reject(e);
         }
     })
 
