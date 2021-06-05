@@ -20,37 +20,38 @@ const IMAGE_MOBILE_SWIFT = 'http://bit.ly/bot_swift';
 
 
 let callSendAPI = async (sender_psid, response) => {
-    return new Promise(async (resolve, reject) => {
+    /* return new Promise(async (resolve, reject) => {
         try {
             // Construct the message body
-            let request_body = {
-                "recipient": {
-                    "id": sender_psid
-                },
-                "message": response
-            }
-
-            // Send the HTTP request to the Messenger Platform
-            await sendTypingon(sender_psid);
-            await MarkMessage(sender_psid);
-
-            request({
-                "uri": "https://graph.facebook.com/v10.0/me/messages",
-                "qs": { "access_token": PAGE_ACCESS_TOKEN },
-                "method": "POST",
-                "json": request_body
-            }, (err, res, body) => {
-                if (!err) {
-                    resolve('message sent!')
-                } else {
-                    console.error("Unable to send message:" + err);
-                }
-            });
+            
 
         } catch (e) {
             reject(e);
         }
-    })
+    }) */
+    let request_body = {
+        "recipient": {
+            "id": sender_psid
+        },
+        "message": response
+    }
+
+    // Send the HTTP request to the Messenger Platform
+    await sendTypingon(sender_psid);
+    await MarkMessage(sender_psid);
+
+    request({
+        "uri": "https://graph.facebook.com/v10.0/me/messages",
+        "qs": { "access_token": PAGE_ACCESS_TOKEN },
+        "method": "POST",
+        "json": request_body
+    }, (err, res, body) => {
+        if (!err) {
+            console.log('message sent!')
+        } else {
+            console.error("Unable to send message:" + err);
+        }
+    });
 
 };
 
