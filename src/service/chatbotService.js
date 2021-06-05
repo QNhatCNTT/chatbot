@@ -158,12 +158,12 @@ let getStartedTemplate = () => {
                     "buttons": [
                         {
                             "type": "postback",
-                            "title": "Tìm kiếm bài giảng",
+                            "title": "Tìm kiếm",
                             "payload": "COURSE_SEARCH",
                         },
                         {
                             "type": "postback",
-                            "title": "Danh mục bài giảng",
+                            "title": "Menu Khóa Học",
                             "payload": "COURSE_CATALOG",
                         }
                     ],

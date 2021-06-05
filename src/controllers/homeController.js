@@ -236,12 +236,12 @@ let setupPersistentMenu = async (req, res) => {
                 "call_to_actions": [
                     {
                         "type": "postback",
-                        "title": "Tìm kiếm khóa học",
+                        "title": "Tìm kiếm",
                         "payload": "COURSE_SEARCH"
                     },
                     {
                         "type": "postback",
-                        "title": "Danh mục khóa học",
+                        "title": "Menu Khóa Học",
                         "payload": "COURSE_CATALOG"
                     },
                     {
@@ -252,7 +252,7 @@ let setupPersistentMenu = async (req, res) => {
                     },
                     {
                         "type": "web_url",
-                        "title": "Website",
+                        "title": "Truy cập Website",
                         "url": "https://demo-bot-chat.herokuapp.com/",
                         "webview_height_ratio": "full"
                     },
