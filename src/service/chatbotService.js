@@ -41,6 +41,7 @@ let callSendAPI = async (sender_psid, response) => {
                 "json": request_body
             }, (err, res, body) => {
                 console.log(body);
+                console.log(res)
                 if (!err) {
                     resolve('message sent!')
                 } else {
@@ -338,7 +339,7 @@ let getCatWeb = () => {
                     ],
                 },
                 {
-                    "title": "",
+                    "title": "Opision",
                     "subtitle": "",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
@@ -457,7 +458,7 @@ let getCatMobile = () => {
                     ],
                 },
                 {
-                    "title": "",
+                    "title": "Opision",
                     "subtitle": "",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
