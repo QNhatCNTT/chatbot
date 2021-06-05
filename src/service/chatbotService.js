@@ -348,6 +348,12 @@ let getCatWeb = () => {
                             "title": "Trở về",
                             "payload": "BACK_CATALOG",
                         },
+                        {
+                            "type": "web_url",
+                            "title": "Truy cập web",
+                            "url": "https://demo-bot-chat.herokuapp.com/",
+                            "webview_height_ratio": "full"
+                        }
 
                     ],
                 }
@@ -458,7 +464,7 @@ let getCatMobile = () => {
                     ],
                 },
                 {
-                    "title": "Opision",
+                    "title": "Other",
                     "subtitle": "",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
@@ -467,6 +473,12 @@ let getCatMobile = () => {
                             "title": "Trở về",
                             "payload": "BACK_CATALOG",
                         },
+                        {
+                            "type": "web_url",
+                            "title": "Truy cập web",
+                            "url": "https://demo-bot-chat.herokuapp.com/",
+                            "webview_height_ratio": "full"
+                        }
 
                     ],
                 }
