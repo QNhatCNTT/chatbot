@@ -141,11 +141,11 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotService.handleSendCatalog(sender_psid);
             break;
 
-        case 'WEB':
+        case 'LEARN_WE':
             await chatbotService.handleSendCatWeb(sender_psid);
             break;
 
-        case 'MOBILE':
+        case 'LEARN_MOBILE':
             await chatbotService.handleSendCatMobile(sender_psid);
             break;
 

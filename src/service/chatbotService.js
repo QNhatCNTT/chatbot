@@ -31,8 +31,8 @@ let callSendAPI = async (sender_psid, response) => {
             }
 
             // Send the HTTP request to the Messenger Platform
-            /*  await sendTypingon(sender_psid);
-             await MarkMessage(sender_psid); */
+            await sendTypingon(sender_psid);
+            await MarkMessage(sender_psid);
 
             request({
                 "uri": "https://graph.facebook.com/v10.0/me/messages",
@@ -53,7 +53,7 @@ let callSendAPI = async (sender_psid, response) => {
     })
 
 
-};
+}
 
 let sendTypingon = (sender_psid) => {
     // Construct the message body
@@ -77,7 +77,7 @@ let sendTypingon = (sender_psid) => {
             console.error("Unable to send sendTypingon:" + err);
         }
     });
-};
+}
 
 let MarkMessage = (sender_psid) => {
     // Construct the message body
@@ -101,7 +101,7 @@ let MarkMessage = (sender_psid) => {
             console.error("Unable to send sendTypingon:" + err);
         }
     });
-};
+}
 
 let getUserName = (sender_psid) => {
 
@@ -120,7 +120,7 @@ let getUserName = (sender_psid) => {
             }
         });
     })
-};
+}
 
 let handleGetStarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
@@ -141,7 +141,7 @@ let handleGetStarted = (sender_psid) => {
             reject(e);
         }
     })
-};
+}
 
 let getStartedTemplate = () => {
     let response = {
@@ -170,7 +170,7 @@ let getStartedTemplate = () => {
         }
     };
     return response;
-};
+}
 
 let handleSendCatalog = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
@@ -185,7 +185,7 @@ let handleSendCatalog = (sender_psid) => {
             reject(e);
         }
     })
-};
+}
 
 let getMainMenuTemplate = () => {
     let response = {
@@ -201,12 +201,12 @@ let getMainMenuTemplate = () => {
                         {
                             "type": "postback",
                             "title": "Learn Web",
-                            "payload": "WEB",
+                            "payload": "LEARN_WEB",
                         },
                         {
                             "type": "postback",
                             "title": "Learn Mobile",
-                            "payload": "MOBILE",
+                            "payload": "LEARN_MOBILE",
                         },
 
                     ],
@@ -235,7 +235,7 @@ let getMainMenuTemplate = () => {
         }
     };
     return response;
-};
+}
 
 let handleSendCatWeb = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
@@ -249,7 +249,7 @@ let handleSendCatWeb = (sender_psid) => {
             reject(e);
         }
     })
-};
+}
 
 let getCatWeb = () => {
     let response = {
@@ -353,7 +353,7 @@ let getCatWeb = () => {
         }
     };
     return response;
-};
+}
 
 let handleSendCatMobile = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
@@ -367,7 +367,7 @@ let handleSendCatMobile = (sender_psid) => {
             reject(e);
         }
     })
-};
+}
 
 let getCatMobile = () => {
     let response = {
@@ -471,23 +471,23 @@ let getCatMobile = () => {
         }
     };
     return response;
-};
+}
 
 let handleBackCatalog = async (sender_psid) => {
     await handleSendCatalog(sender_psid);
-};
+}
 
 let handleBackMain = async (sender_psid) => {
     let response2 = getStartedTemplate();
     await callSendAPI(sender_psid, response2);
-};
+}
 let handleBackWeb = async (sender_psid) => {
     await handleSendCatWeb(sender_psid);
-};
+}
 
 let handleBackMobile = async (sender_psid) => {
     await handleSendCatMobile(sender_psid);
-};
+}
 
 let handleDetailJavascript = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
@@ -501,7 +501,7 @@ let handleDetailJavascript = (sender_psid) => {
             reject(e);
         }
     })
-};
+}
 
 let getDetailJavascript = () => {
     let response = {
@@ -568,7 +568,7 @@ let getDetailJavascript = () => {
         }
     };
     return response;
-};
+}
 module.exports = {
     handleGetStarted: handleGetStarted,
     handleSendCatalog: handleSendCatalog,
