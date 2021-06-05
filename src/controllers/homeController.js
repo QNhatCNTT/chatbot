@@ -166,6 +166,9 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotService.handleDetailJavascript(sender_psid);
             break;
 
+        case 'VIEW_REACTJS':
+            await chatbotService.handleDetailReactJS(sender_psid);
+            break;
 
         default:
             // code block

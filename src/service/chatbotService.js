@@ -567,9 +567,91 @@ let getDetailJavascript = () => {
                     "image_url": IMAGE_WEB_JS,
                     "buttons": [
                         {
+                            "type": "web_url",
+                            "title": "Đăng Ký",
+                            "url": "https://demo-bot-chat.herokuapp.com/",
+                            "webview_height_ratio": "full"
+                        },
+                        {
                             "type": "postback",
-                            "title": "Đăng ký",
-                            "payload": "REGISTER",
+                            "title": "Trở về",
+                            "payload": "BACK_WEB",
+                        },
+
+                    ],
+                }
+                ]
+            }
+        }
+    };
+    return response;
+}
+
+let handleDetailReactJS = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+
+            let response1 = getDetailReactJS();
+            await callSendAPI(sender_psid, response1);
+
+            resolve('done');
+        } catch (e) {
+            reject(e);
+        }
+    })
+}
+let getDetailReactJS = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "Tutorial 1",
+                    "subtitle": "Setup môi trường và cài đặt",
+                    "image_url": IMAGE_WEB_REACTJS,
+
+                },
+                {
+                    "title": "Tutorial 2",
+                    "subtitle": "Khái niệm 1 và thực hành 1",
+                    "image_url": IMAGE_WEB_REACTJS,
+
+                },
+                {
+                    "title": "Tutorial 3",
+                    "subtitle": "Khái niệm 2 và thực hành 2",
+                    "image_url": IMAGE_WEB_REACTJS,
+
+                },
+                {
+                    "title": "Tutorial 4",
+                    "subtitle": "Khái niệm 3 và thực hành 3",
+                    "image_url": IMAGE_WEB_REACTJS,
+
+                },
+                {
+                    "title": "Tutorial 5",
+                    "subtitle": "Khái niệm 4 và thực hành 4",
+                    "image_url": IMAGE_WEB_REACTJS,
+
+                },
+                {
+                    "title": "Tutorial 6",
+                    "subtitle": "Khái niệm 5 và thực hành 5",
+                    "image_url": IMAGE_WEB_REACTJS,
+
+                },
+                {
+                    "title": "Đăng ký",
+                    "subtitle": "Giá: 3.500.000VND",
+                    "image_url": IMAGE_WEB_JS,
+                    "buttons": [
+                        {
+                            "type": "web_url",
+                            "title": "Đăng Ký",
+                            "url": "https://demo-bot-chat.herokuapp.com/",
+                            "webview_height_ratio": "full"
                         },
                         {
                             "type": "postback",
@@ -595,4 +677,5 @@ module.exports = {
     handleDetailJavascript: handleDetailJavascript,
     handleBackWeb: handleBackWeb,
     handleBackMobile: handleBackMobile,
+    handleDetailReactJS: handleDetailReactJS,
 }
