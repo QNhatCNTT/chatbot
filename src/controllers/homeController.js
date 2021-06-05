@@ -169,7 +169,18 @@ async function handlePostback(sender_psid, received_postback) {
         case 'VIEW_REACTJS':
             await chatbotService.handleDetailReactJS(sender_psid);
             break;
-
+        case 'VIEW_NODEJS':
+            await chatbotService.handleDetailNodeJS(sender_psid);
+            break;
+        case 'VIEW_ANDROID':
+            await chatbotService.handleDetailAndroid(sender_psid);
+            break;
+        case 'VIEW_REACTNATIVE':
+            await chatbotService.handleDetailReactNative(sender_psid);
+            break;
+        case 'VIEW_IOS':
+            await chatbotService.handleDetailIOS(sender_psid);
+            break;
         default:
             // code block
             response = { "text": `oop! I don't know  response with Postback ${payload}` }
