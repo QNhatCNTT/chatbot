@@ -339,7 +339,7 @@ let getCatWeb = () => {
                     ],
                 },
                 {
-                    "title": "Opision",
+                    "title": "Other",
                     "subtitle": "",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
