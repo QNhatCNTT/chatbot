@@ -244,6 +244,7 @@ let handleSendCatWeb = (sender_psid) => {
             let response1 = getCatWeb();
             await callSendAPI(sender_psid, response1);
 
+
             resolve('done');
         } catch (e) {
             reject(e);
@@ -361,6 +362,7 @@ let handleSendCatMobile = (sender_psid) => {
 
             let response1 = getCatMobile();
             await callSendAPI(sender_psid, response1);
+
 
             resolve('done');
         } catch (e) {
