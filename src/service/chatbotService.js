@@ -335,8 +335,8 @@ let getCatWeb = () => {
                     ],
                 },
                 {
-                    "title": "back",
-                    "subtitle": "Quay trở về main bot",
+                    /* "title": "back",
+                    "subtitle": "quay trở về", */
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
@@ -453,8 +453,8 @@ let getCatMobile = () => {
                     ],
                 },
                 {
-                    "title": "back",
-                    "subtitle": "Quay trở về main bot",
+                    /* "title": "back",
+                    "subtitle": "Quay trở về main bot", */
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
